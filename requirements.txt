@@ -1,0 +1,133 @@
+# BlackPulse v3.0 - Gerekli Python Paketleri
+# Askeri sınıf ağ test aracı için bağımlılıklar
+
+# ========== TEMEL GEREKSİNİMLER ==========
+# Bu paketler BlackPulse'un çalışması için zorunludur
+
+# DNS çözümleme ve ağ işlemleri
+dnspython>=2.3.0
+
+# HTTP/HTTPS istekleri
+requests>=2.28.0
+
+# Asenkron HTTP işlemleri
+aiohttp>=3.8.0
+
+# Sistem kaynak izleme
+psutil>=5.9.0
+
+# YAML yapılandırma dosyası desteği
+pyyaml>=6.0
+
+# Asenkron programlama (Python 3.8+ ile birlikte gelir)
+asyncio>=3.4.3
+
+# ========== GELİŞMİŞ ÖZELLİKLER ==========
+# Bu paketler ek özellikler için gereklidir
+
+# Grafik ve görselleştirme
+matplotlib>=3.5.0
+numpy>=1.21.0
+
+# Tablo formatlaması
+tabulate>=0.9.0
+
+# WebSocket desteği
+websockets>=10.4
+
+# Ağ paket manipülasyonu (ICMP testleri için)
+scapy>=2.4.5
+
+# ========== İSTEĞE BAĞLI PAKETLER ==========
+# Bu paketler performansı artırır ama zorunlu değildir
+
+# Hızlı JSON işleme
+ujson>=5.6.0
+
+# Gelişmiş HTTP/2 desteği
+httpx>=0.24.0
+
+# Asenkron DNS çözümleme
+aiodns>=3.0.0
+
+# Hızlı regex işlemleri
+regex>=2022.10.31
+
+# Gelişmiş tarih/saat işlemleri
+python-dateutil>=2.8.2
+
+# ========== GÜVENLİK VE ŞİFRELEME ==========
+# SSL/TLS ve şifreleme işlemleri için
+
+# Gelişmiş şifreleme
+cryptography>=38.0.0
+
+# SSL sertifika doğrulama
+certifi>=2022.12.7
+
+# ========== PLATFORM ÖZEL ==========
+# Belirli platformlar için ek gereksinimler
+
+# Windows için ek ağ desteği
+pywin32>=305; sys_platform == "win32"
+
+# Linux için sistem çağrıları
+python-prctl>=1.8.0; sys_platform == "linux"
+
+# ========== GELİŞTİRİCİ ARAÇLARI ==========
+# Geliştirme ve hata ayıklama için (isteğe bağlı)
+
+# Kod kalitesi
+flake8>=6.0.0
+
+# Tip kontrolü
+mypy>=1.0.0
+
+# Test framework
+pytest>=7.2.0
+
+# Bellek profiling
+memory-profiler>=0.60.0
+
+# ========== KURULUM NOTLARI ==========
+# 
+# Temel kurulum:
+# pip install -r requirements.txt
+#
+# Sadece zorunlu paketler:
+# pip install dnspython requests aiohttp psutil pyyaml
+#
+# Tüm özellikler için:
+# pip install -r requirements.txt
+#
+# Platform özel kurulum:
+# Linux: sudo apt install python3-dev libssl-dev
+# Windows: Visual Studio Build Tools gerekebilir
+# Termux: pkg install python-dev openssl-dev
+#
+# ICMP testleri için (Linux/Termux):
+# sudo apt install libpcap-dev (Linux)
+# pkg install libpcap-dev (Termux)
+#
+# Root yetkileri gerekebilir:
+# sudo pip install scapy (Linux)
+#
+# ========== VERSİYON UYUMLULUĞU ==========
+# Python 3.8+ gereklidir
+# Önerilen: Python 3.10+
+# Test edildi: Python 3.8, 3.9, 3.10, 3.11
+#
+# ========== PERFORMANS OPTİMİZASYONU ==========
+# Maksimum performans için:
+# pip install uvloop (Linux/macOS)
+# pip install cchardet (hızlı karakter algılama)
+# pip install orjson (hızlı JSON)
+
+# Hızlı event loop (Linux/macOS için)
+uvloop>=0.17.0; sys_platform != "win32"
+
+# Hızlı karakter algılama
+cchardet>=2.1.7
+
+# Ultra hızlı JSON
+orjson>=3.8.0
