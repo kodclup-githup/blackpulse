@@ -134,7 +134,7 @@ pip install -r requirements.txt
 pip install matplotlib numpy tabulate websockets scapy
 ```
 
-#### **📱 Termux Kurulumu**
+#### **📱 Termux Kurulumu(root olmadan çalışmaz)**
 
 ```bash
 # Termux paketlerini güncelleyin
